@@ -1,25 +1,11 @@
-import About from "@/components/webcomp/About";
-import Clients from "@/components/webcomp/Clients";
-import CTA from "@/components/webcomp/cta";
-import Hero from "@/components/webcomp/Hero";
-import Navbar from "@/components/webcomp/Navbar";
-import Projects from "@/components/webcomp/Projects";
-import Services from "@/components/webcomp/Services";
+import Banner from "@/components/webcomp/Home/Banner";
 
 
 
-export default function HomePage() {
+export default function Home() {
    return (
-      <main className="bg-background text-black font-body">
-         <Navbar />
-         <Hero />
-         <Clients />
-         <About />
-         <Services />
-         <Projects />
-         {/* <Process /> */}
-         <CTA />
-         {/* <Footer /> */}
+      <main className="relative w-full h-screen bg-yellow-300">
+         <Banner />
       </main>
    )
 }
