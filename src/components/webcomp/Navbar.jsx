@@ -10,34 +10,24 @@ export default function Navbar() {
 
    return (
       <>
+         <div className="fixed md:hidden top-0 left-0 z-[100] ml-4 mt-1">
+            <div className="bg-white/50 backdrop-blur-lg border border-white/50 rounded"><img className="w-12" src="/logo/logo.png" alt="Logo" /></div>
+         </div>
          {/* 🔹 MENU (Always On Top) */}
-         <div className="fixed top-0 right-0 z-[100] mr-10">
+         <div className="fixed top-0 right-0 z-[100] md:mr-10">
             <Menu open={open} setOpen={setOpen} />
          </div>
 
-         {/* <div
-            className={`fixed top-0 left-0 w-full h-[90vh] z-[50]
-            transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)]
-            ${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
-         >
-            <div className="w-full h-full backdrop-blur-xs bg-white/20 border-b border-white/80 shadow-2xl relative overflow-hidden">
-
-               <div className="absolute inset-0 bg-white/20" />
-
-               <div className="relative flex items-center justify-center h-full">
-                  <h1 className="text-zinc-800 text-5xl font-light tracking-widest">
-                     EXPLORE
-                  </h1>
-               </div>
-            </div>
-         </div> */}
          {/* 🔹 FULL SCREEN NAV */}
          <div
-            className={`fixed inset-0 z-[50]
+            className={`fixed hidden md:block inset-0 z-[50]
             transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)]
             ${open ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0 pointer-events-none"}`}
          >
-            <div className="w-full h-[90vh] border-b border-b-white/80 bg-white/50 backdrop-blur-sm flex items-end overflow-hidden">
+            <div className="relative w-full h-[90vh] border-b border-b-white/90 bg-white/50 backdrop-blur-xl flex items-end overflow-hidden">
+               <div className="absolute -top-10 left-10">
+                  <img className="w-12" src="/logo/logo.png" alt="" />
+               </div>
                <div className="relative h-[80%] py-10 w-full flex flex-col justify-between items-center">
                   {/* MAIN LINKS */}
                   <div className="grid grid-cols-3 gap-x-10 gap-y-4">
@@ -56,16 +46,16 @@ export default function Navbar() {
                            className="group flex items-start gap-3"
                         >
                            {/* Small Number */}
-                           <span className="text-xs mt-3 text-black tracking-widest">
+                           <span className="text-xs mt-3 text-black font-semibold tracking-widest">
                               {item.no}
                            </span>
 
                            {/* Big Text */}
                            <span
-                              className={`text-5xl font-light tracking-tight transition-all duration-300
+                              className={`text-5xl font-semibold tracking-tight transition-all duration-300
                                  ${item.active
-                                    ? "text-zinc-700"
-                                    : "text-zinc-700 group-hover:text-zinc-800"}
+                                    ? "text-zinc-800"
+                                    : "text-zinc-800 group-hover:text-black"}
                               `}
                            >
                               {item.name}
@@ -77,8 +67,8 @@ export default function Navbar() {
 
                   {/* BOTTOM SOCIAL SECTION */}
                   <div className="flex items-end justify-between">
-                     <div className="flex gap-24 text-sm text-zinc-800">
-                        {["Facebook", "LinkedIn", "Behance", "Awwwards"].map((item, i) => (
+                     <div className="flex gap-24 text-sm text-black">
+                        {["Instagram", "FaceBook", "LinkedIn", "X - Get Updates"].map((item, i) => (
                            <div key={i} className="group flex flex-col gap-2 hover:cursor-pointer">
                               <div className="flex items-center gap-2">
                                  <span>{item}</span>
@@ -86,7 +76,7 @@ export default function Navbar() {
                                     ↗
                                  </span>
                               </div>
-                              <div className="h-[1px] bg-zinc-700 w-40 group-hover:bg-zinc-800 transition" />
+                              <div className="h-[1px] bg-black w-40 group-hover:bg-black transition" />
                            </div>
                         ))}
                      </div>
@@ -95,7 +85,7 @@ export default function Navbar() {
             </div>
          </div>
 
-         <div className="fixed top-0 left-10 z-[10]">
+         <div className="fixed hidden md:block top-0 left-10 z-[10]">
             <CurvedNavbar />
          </div>
       </>
