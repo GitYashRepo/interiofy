@@ -15,7 +15,7 @@ export default function CurvedNavbar() {
 
    return (
       <div
-         className="w-[500px] h-[60px] flex flex-row items-center justify-center gap-6 bg-white/90 hover:bg-white"
+         className="w-[500px] h-[60px] flex flex-row items-center justify-center gap-6 bg-white/50 backdrop-blur-lg border-b border-white/70 hover:bg-white"
          style={{
             clipPath: `path(
             "M 0,0 L 500,0 L 460,54 A 10,10 0,0,1 450,60 L 40,60 A 10,10 0,0,1 32,52 L 0,0 Z"
@@ -23,8 +23,8 @@ export default function CurvedNavbar() {
          }}
       >
          <Link href="/">
-            <div className='hover:scale-105 transition-transform duration-300'>
-               <img src="/logo/logo.png" alt="Logo" className="w-18" />
+            <div className='hover:scale-105 transition-transform duration-300 mr-10'>
+               <img src="/logo/logo.png" alt="Logo" className="w-14" />
             </div>
          </Link>
          <div className='flex flex-row items-center justify-center gap-6'>
