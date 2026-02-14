@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Banner() {
    return (
-      <div>
+      <>
          <div className="relative">
             <div className="w-full h-screen overflow-hidden">
                <img src="/Banner/Home.jpg" alt="Home Banner" className="w-full h-full object-cover" />
@@ -93,10 +93,10 @@ export default function Banner() {
                   maskSize: "100% 100%",
                }}
             >
-               <p className="absolute top-2 left-2 md:left-6 text-[10px] font-bold md:text-base underline flex flex-row gap-2">INTERIOFY <span className="hidden md:block font-thin">↗</span></p>
+               <Link href="/about"><p className="absolute top-2 left-2 md:left-6 text-[10px] font-bold md:text-base flex flex-row gap-2"><span className="underline underline-offset-4">INTERIOFY</span> <span className="hidden md:block font-thin">↗</span></p></Link>
                <p className="absolute top-20 left-2 md:left-6 text-xs md:text-base flex flex-row gap-2">Transforming spaces into elegant, <br />functional environments tailored to your lifestyle.</p>
-               <h1 className="absolute bottom-4 left-2 md:left-6 text-2xl md:text-5xl flex flex-row gap-2">Built to Impress. <br /> Designed to Live In.</h1>
-               <div className="absolute hidden bottom-4 right-4 border md:flex flex-row gap-2">
+               <h1 className="absolute bottom-10 left-2 md:left-6 text-2xl md:text-5xl flex flex-row gap-2">Built to Impress. <br /> Designed to Live In.</h1>
+               <div className="absolute hidden bottom-8 right-8 border md:flex flex-row gap-2">
                   <Link href="/services">
                      <div className="flex flex-col bg-white items-center justify-between border border-black p-2 rounded-md">
                         <div className="w-20 overflow-hidden rounded mb-4"><img src="/Banner/Home.jpg" alt="" /></div>
@@ -173,6 +173,6 @@ export default function Banner() {
                </defs>
             </svg>
          </div>
-      </div>
+      </>
    )
 }
