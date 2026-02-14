@@ -107,9 +107,6 @@ export default function ContactPage() {
 
             {/* Right Column: Globe (Sticky) */}
             <div className="relative h-[600px] w-full flex items-center justify-center lg:sticky lg:top-24 rounded-[3rem] bg-neutral-50 overflow-hidden">
-               {/* <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
-                  <span className="text-[12rem] font-black text-black/5 opacity-50 select-none">WORLD</span>
-               </div> */}
                <canvas
                   ref={canvasRef}
                   style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
